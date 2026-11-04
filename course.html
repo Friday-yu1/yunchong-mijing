@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>科学课程 · 云虫秘境</title>
+  <meta name="description" content="从观察到理解，一步步认识云南昆虫 · 分学段科学课程">
+  <link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="species.html">物种库</a></li>
+      <li><a href="expedition.html">云南寻虫</a></li>
+      <li><a href="course.html" class="active">科学课程</a></li>
+      <li><a href="interact.html">互动区</a></li>
+      <li><a href="my.html">我的</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- 页头 -->
+    <header class="course-header">
+      <h1>科学课程</h1>
+      <p class="course-subtitle">从观察到理解，一步步认识云南昆虫</p>
+    </header>
+
+    <!-- 学段筛选 -->
+    <div class="course-tabs" id="course-tabs" role="tablist" aria-label="学段筛选">
+      <button type="button" class="course-tab active" data-stage="all">全部</button>
+      <button type="button" class="course-tab" data-stage="primary-low">小学低年级</button>
+      <button type="button" class="course-tab" data-stage="primary-high">小学高年级</button>
+      <button type="button" class="course-tab" data-stage="junior">初中</button>
+      <button type="button" class="course-tab" data-stage="senior">高中</button>
+    </div>
+
+    <!-- 课程卡片网格（JS 渲染占位） -->
+    <section class="course-grid" id="course-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer">
+    <p class="principles">低干扰观测 · 不捕捉 · 不售卖 · 不商业放飞</p>
+    <p>© 云虫秘境项目组</p>
+  </footer>
+
+  <script src="js/course.js?v=2"></script>
+</body>
+</html>

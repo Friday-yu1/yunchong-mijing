@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>物种库 · 云虫秘境</title>
+  <meta name="description" content="80种云南昆虫形态档案 · 9个目 · 沿生态梯度检索">
+  <link rel="stylesheet" href="css/style.css?v=16">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="species.html" class="active">物种库</a></li>
+      <li><a href="expedition.html">云南寻虫</a></li>
+      <li><a href="course.html">科学课程</a></li>
+      <li><a href="interact.html">互动区</a></li>
+      <li><a href="my.html">我的</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- 页头 -->
+    <header class="species-header">
+      <h1>物种图鉴</h1>
+      <p class="species-subtitle">80种云南昆虫形态档案</p>
+    </header>
+
+    <div class="species-layout">
+      <!-- 左侧分类导航 -->
+      <aside class="species-side">
+        <div class="side-group">
+          <h3>按目浏览</h3>
+          <ul class="side-list" id="side-orders"></ul>
+        </div>
+        <div class="side-group">
+          <h3>按生态站</h3>
+          <ul class="side-list" id="side-bands"></ul>
+        </div>
+        <div class="side-group">
+          <h3>保护等级</h3>
+          <ul class="side-list" id="side-protect"></ul>
+        </div>
+        <div class="side-group">
+          <h3>成虫月份</h3>
+          <div class="side-months" id="side-months"></div>
+        </div>
+        <div class="side-group">
+          <h3>食性</h3>
+          <ul class="side-list" id="side-diet"></ul>
+        </div>
+        <button type="button" class="side-reset" id="side-reset">重置全部筛选</button>
+      </aside>
+
+      <!-- 右侧主区 -->
+      <div class="species-main">
+        <div class="species-toolbar">
+          <input type="search" id="species-search" class="search-input"
+                 placeholder="搜索中文名或拉丁学名…" aria-label="搜索物种">
+          <label class="sort-label">排序
+            <select id="species-sort" aria-label="排序方式">
+              <option value="code">按档案编号</option>
+              <option value="alt">按海拔（低→高）</option>
+              <option value="size">按翅展/体长（小→大）</option>
+            </select>
+          </label>
+          <div class="view-toggle" id="view-toggle" role="group" aria-label="视图切换">
+            <button type="button" class="view-btn active" data-view="cards" aria-pressed="true">卡片</button>
+            <button type="button" class="view-btn" data-view="table" aria-pressed="false">表格</button>
+          </div>
+        </div>
+
+        <div class="result-line"><span class="species-count" id="species-count"></span></div>
+
+        <!-- 卡片视图 -->
+        <section class="species-grid" id="species-grid" aria-live="polite"></section>
+
+        <!-- 表格视图 -->
+        <section class="species-table-wrap" id="species-table-wrap" hidden>
+          <table class="species-table">
+            <thead>
+              <tr>
+                <th>档案编号</th><th>中文名</th><th>拉丁学名</th><th>目</th>
+                <th>生态站</th><th>保护等级</th><th>完整度</th>
+              </tr>
+            </thead>
+            <tbody id="species-tbody"></tbody>
+          </table>
+        </section>
+
+        <p class="species-empty" id="species-empty" hidden>没有匹配的物种，换个关键词或筛选条件试试。</p>
+
+        <!-- 分页 -->
+        <nav class="species-pager" id="species-pager" aria-label="分页"></nav>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="principles">低干扰观测 · 不捕捉 · 不售卖 · 不商业放飞</p>
+    <p>© 云虫秘境项目组 · 云南大学学术指导</p>
+  </footer>
+
+  <script src="js/species-data.js?v=2"></script>
+  <script src="js/species-images.js?v=2"></script>
+  <script src="js/species.js?v=5"></script>
+</body>
+</html>

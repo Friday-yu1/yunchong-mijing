@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云虫秘境 · 云南昆虫沉浸式图鉴</title>
+  <meta name="description" content="沿云南生态梯度，探索80种暗夜昆虫的博物志">
+  <link rel="stylesheet" href="css/style.css?v=14">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">首页</a></li>
+      <li><a href="species.html">物种库</a></li>
+      <li><a href="expedition.html">云南寻虫</a></li>
+      <li><a href="course.html">科学课程</a></li>
+      <li><a href="interact.html">互动区</a></li>
+      <li><a href="my.html">我的</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <!-- 粒子画布（站点切换瞬间的萤火） -->
+  <canvas id="gradient-fireflies" aria-hidden="true"></canvas>
+
+  <!-- 海拔梯度指示线（左侧固定，贯穿五站，移动端隐藏） -->
+  <div class="elevation-rail" aria-hidden="true">
+    <span class="rail-line"></span>
+    <span class="rail-dot dot-s5"><i></i><em>4000m</em></span>
+    <span class="rail-dot dot-s4"><i></i><em>3000m</em></span>
+    <span class="rail-dot dot-s3"><i></i><em>1000m</em></span>
+    <span class="rail-dot dot-s2"><i></i><em>2000m</em></span>
+    <span class="rail-dot dot-s1"><i></i><em>500m</em></span>
+  </div>
+
+  <!-- 生态梯度动线：五站逐屏下探 -->
+  <main>
+    <!-- 第一站 · 滇南热带雨林 -->
+    <section class="station station-1" id="station-1" data-accent="#4a9e6e">
+      <div class="layer-far" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+      </div>
+      <div class="layer-front sil-mantis" aria-hidden="true">
+        <svg viewBox="0 0 220 320" role="img" aria-label="丽眼斑螳剪影">
+          <g fill="currentColor" stroke="none">
+            <path d="M96 34 Q80 10 58 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M124 34 Q140 10 162 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M110 28 L84 52 L110 76 L136 52 Z"/>
+            <path d="M103 72 Q109 122 106 168 L114 168 Q111 122 117 72 Z"/>
+            <path d="M110 164 Q78 208 84 266 L110 292 L136 266 Q142 208 110 164 Z"/>
+            <path d="M101 90 Q64 98 55 132 Q53 150 68 158 Q64 132 84 119 Q96 111 105 108 Z"/>
+            <path d="M119 90 Q156 98 165 132 Q167 150 152 158 Q156 132 136 119 Q124 111 115 108 Z"/>
+            <path d="M98 200 Q56 228 40 270" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <path d="M122 200 Q164 228 180 270" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="station-content">
+        <p class="station-index">第一站 · 低地雨林</p>
+        <h2 class="station-name">滇南热带雨林</h2>
+        <p class="station-poem">雨脚落进叶隙的瞬间，林下亮起一百双安静的眼睛。</p>
+        <p class="station-bug">
+          <span class="bug-name">丽眼斑螳</span>
+          <span class="bug-latin">Creobroter gemmatus</span>
+        </p>
+        <a class="btn-station" href="species.html?band=rainforest">去看本站代表虫种</a>
+      </div>
+    </section>
+
+    <!-- 第二站 · 哀牢云雾林 -->
+    <section class="station station-2" id="station-2" data-accent="#b8956a">
+      <div class="layer-far" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+      </div>
+      <div class="layer-front sil-stag" aria-hidden="true">
+        <svg viewBox="0 0 320 280" role="img" aria-label="巨叉锹甲剪影">
+          <g fill="currentColor" stroke="none">
+            <path d="M120 44 Q94 10 56 6 Q84 16 88 36 Q97 24 113 28 Q117 42 124 56 Z"/>
+            <path d="M200 44 Q226 10 264 6 Q236 16 232 36 Q223 24 207 28 Q203 42 196 56 Z"/>
+            <rect x="116" y="50" width="88" height="42" rx="16"/>
+            <rect x="110" y="94" width="100" height="40" rx="14"/>
+            <ellipse cx="160" cy="186" rx="64" ry="68"/>
+            <path d="M126 52 Q112 32 94 30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <path d="M194 52 Q208 32 226 30" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <path d="M114 104 Q64 96 38 62" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            <path d="M206 104 Q256 96 282 62" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            <path d="M102 156 Q50 162 28 194" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            <path d="M218 156 Q270 162 292 194" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            <path d="M106 218 Q64 248 54 272" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+            <path d="M214 218 Q256 248 266 272" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <div class="station-content">
+        <p class="station-index">第二站 · 云雾深处</p>
+        <h2 class="station-name">哀牢云雾林</h2>
+        <p class="station-poem">雾从梯田爬上来，把整座山的甲虫都裹进湿漉漉的夜里。</p>
+        <p class="station-bug">
+          <span class="bug-name">巨叉锹甲</span>
+          <span class="bug-latin">Lucanus planeti</span>
+        </p>
+        <a class="btn-station" href="species.html?band=mist-forest">去看本站代表虫种</a>
+      </div>
+    </section>
+
+    <!-- 第三站 · 红河蝴蝶谷 -->
+    <section class="station station-3" id="station-3" data-accent="#9b8ec4">
+      <div class="layer-far" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+      </div>
+      <div class="layer-front sil-butterfly" aria-hidden="true">
+        <svg viewBox="0 0 320 270" role="img" aria-label="金斑喙凤蝶剪影">
+          <g fill="currentColor" stroke="none">
+            <ellipse cx="160" cy="152" rx="9" ry="56"/>
+            <circle cx="160" cy="88" r="12"/>
+            <path d="M154 80 Q136 54 116 46" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M166 80 Q184 54 204 46" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M152 122 Q92 42 28 46 Q58 94 84 134 Q118 154 152 144 Z"/>
+            <path d="M168 122 Q228 42 292 46 Q262 94 236 134 Q202 154 168 144 Z"/>
+            <path d="M152 152 Q112 160 96 198 Q112 228 140 226 L146 256 L156 222 Q160 202 154 178 Z"/>
+            <path d="M168 152 Q208 160 224 198 Q208 228 180 226 L174 256 L164 222 Q160 202 166 178 Z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="station-content">
+        <p class="station-index">第三站 · 蝶之谷</p>
+        <h2 class="station-name">红河蝴蝶谷</h2>
+        <p class="station-poem">溪谷拐弯的地方，风把整个季节的翅膀都吹了起来。</p>
+        <p class="station-bug">
+          <span class="bug-name">金斑喙凤蝶</span>
+          <span class="bug-latin">Teinopalpus aureus</span>
+        </p>
+        <a class="btn-station" href="species.html?band=valley">去看本站代表虫种</a>
+      </div>
+    </section>
+
+    <!-- 第四站 · 高黎贡山 -->
+    <section class="station station-4" id="station-4" data-accent="#7ab5b0">
+      <div class="layer-far" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+      </div>
+      <div class="layer-front sil-atlas" aria-hidden="true">
+        <svg viewBox="0 0 360 290" role="img" aria-label="乌桕大蚕蛾剪影">
+          <g fill="currentColor" stroke="none">
+            <ellipse cx="180" cy="162" rx="12" ry="62"/>
+            <circle cx="180" cy="94" r="11"/>
+            <path d="M174 86 Q150 60 128 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M186 86 Q210 60 232 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M170 120 Q96 36 18 32 Q36 98 78 152 Q124 180 168 158 Z"/>
+            <path d="M190 120 Q264 36 342 32 Q324 98 282 152 Q236 180 192 158 Z"/>
+            <path d="M168 160 Q112 172 84 228 Q118 260 160 242 Q176 222 172 188 Z"/>
+            <path d="M192 160 Q248 172 276 228 Q242 260 200 242 Q184 222 188 188 Z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="station-content">
+        <p class="station-index">第四站 · 天行长臂之地</p>
+        <h2 class="station-name">高黎贡山</h2>
+        <p class="station-poem">夜色浓得像树影，世界最大的蛾正把月光摊开在叶背上。</p>
+        <p class="station-bug">
+          <span class="bug-name">乌桕大蚕蛾</span>
+          <span class="bug-latin">Attacus atlas</span>
+        </p>
+        <a class="btn-station" href="species.html?band=gaoligong">去看本站代表虫种</a>
+      </div>
+    </section>
+
+    <!-- 第五站 · 滇西北高山 -->
+    <section class="station station-5" id="station-5" data-accent="#7ab5b0">
+      <div class="layer-far" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+      </div>
+      <div class="layer-front sil-pierid" aria-hidden="true">
+        <svg viewBox="0 0 320 220" role="img" aria-label="橙翅襟粉蝶剪影">
+          <g fill="currentColor" stroke="none">
+            <ellipse cx="160" cy="128" rx="7" ry="48"/>
+            <circle cx="160" cy="74" r="10"/>
+            <path d="M155 66 Q140 44 124 38" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M165 66 Q180 44 196 38" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M154 100 Q104 30 56 34 Q76 82 108 114 Q132 126 154 118 Z"/>
+            <path d="M166 100 Q216 30 264 34 Q244 82 212 114 Q188 126 166 118 Z"/>
+            <path d="M154 126 Q122 136 110 164 Q126 186 150 176 Q158 158 156 140 Z"/>
+            <path d="M166 126 Q198 136 210 164 Q194 186 170 176 Q162 158 164 140 Z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="station-content">
+        <p class="station-index">第五站 · 雪线之下</p>
+        <h2 class="station-name">滇西北高山</h2>
+        <p class="station-poem">风变薄了，花变矮了，一抹橙翼贴着碎石坡掠过雪线。</p>
+        <p class="station-bug">
+          <span class="bug-name">橙翅襟粉蝶</span>
+          <span class="bug-latin">Anthocharis bambusarum</span>
+        </p>
+        <a class="btn-station" href="species.html?band=gaoligong">去看本站代表虫种</a>
+      </div>
+    </section>
+
+    <!-- 底部收束：宏大数据带 -->
+    <section class="gradient-finale" id="finale">
+      <h2 class="finale-title">一座山，读尽云南昆虫</h2>
+      <div class="finale-stats">
+        <div class="stat">
+          <span class="stat-num">1300</span>
+          <span class="stat-label">种蝴蝶</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">210</span>
+          <span class="stat-label">种蜻蜓</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">80</span>
+          <span class="stat-label">种精选图谱</span>
+        </div>
+      </div>
+      <div class="finale-actions">
+        <a href="species.html" class="btn-primary">开始探索物种库</a>
+        <a href="expedition.html" class="btn-secondary">云南哪里看虫</a>
+      </div>
+    </section>
+
+    <!-- Quiz：测测你是什么虫侦探（入口卡片） -->
+    <section class="quiz-section">
+      <div class="quiz-card">
+        <div class="quiz-entry" id="quiz-entry">
+          <h2>测测你是什么虫侦探？</h2>
+          <p class="quiz-lead">5 道轻松小题，做完给你一个标签</p>
+          <button type="button" class="quiz-start" id="quiz-start">开始测试</button>
+        </div>
+        <div id="quiz-body" hidden></div>
+        <button type="button" class="quiz-submit" id="quiz-submit" hidden>提交答案</button>
+        <div class="quiz-result" id="quiz-result" hidden></div>
+      </div>
+    </section>
+
+    <!-- 全站统计 -->
+    <section class="stat-strip" aria-label="物种库统计">
+      <div class="strip-stat"><b>80</b><span>种记录</span></div>
+      <div class="strip-stat"><b>9</b><span>目</span></div>
+      <div class="strip-stat"><b>5</b><span>站</span></div>
+      <div class="strip-stat"><b>12</b><span>月</span></div>
+    </section>
+  </main>
+
+  <script src="js/gradient.js"></script>
+  <script src="js/quiz.js?v=2"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="principles">不捕捉 · 不售卖 · 不商业放飞</p>
+    <p>云虫秘境项目组 · 云南大学学术指导</p>
+  </footer>
+
+</body>
+</html>

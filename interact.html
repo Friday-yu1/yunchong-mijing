@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>观察记录墙 · 云虫秘境</title>
+  <meta name="description" content="观察记录墙 · 上传你的野外观察，看看大家都在哪里遇到虫">
+  <link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="species.html">物种库</a></li>
+      <li><a href="expedition.html">云南寻虫</a></li>
+      <li><a href="course.html">科学课程</a></li>
+      <li><a href="interact.html" class="active">互动区</a></li>
+      <li><a href="my.html">我的</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header class="interact-header">
+      <h1>观察记录墙</h1>
+      <p class="interact-subtitle">你在野外遇到了什么虫？传上来，让虫境里多一双眼睛。</p>
+      <button type="button" class="feed-upload-btn" id="upload-toggle">＋ 上传观察记录</button>
+    </header>
+
+    <!-- 上传表单（点按钮展开） -->
+    <section class="note-section" id="upload-section" hidden>
+      <form class="note-form" id="note-form">
+        <div class="form-row">
+          <label>你的名字（昵称）<input type="text" id="note-name" required maxlength="20" placeholder="昵称"></label>
+          <label>拍摄地点<input type="text" id="note-place" required maxlength="30" placeholder="如：西双版纳勐仑"></label>
+        </div>
+        <div class="form-row">
+          <label>拍摄日期<input type="date" id="note-date" required></label>
+          <label>昆虫名称<input type="text" id="note-bug" maxlength="30" placeholder="不确定可填「待鉴定」"></label>
+        </div>
+        <label class="form-file">照片<span class="file-btn" id="file-btn" tabindex="0" role="button">选择文件</span>
+          <input type="file" id="note-photo" accept="image/*" hidden>
+          <span class="file-name" id="file-name">未选择照片（可只发文字记录）</span>
+        </label>
+        <label>观察记录<textarea id="note-text" rows="3" maxlength="300" placeholder="记录你看到的虫、环境、行为……"></textarea></label>
+        <button type="submit" class="note-submit">发布到记录墙</button>
+        <p class="form-hint">当前版本仅保存在你自己的浏览器中（localStorage），不会上传服务器。</p>
+      </form>
+    </section>
+
+    <!-- 记录流 -->
+    <section class="feed" id="feed"></section>
+  </main>
+
+  <footer class="footer">
+    <p class="principles">低干扰观测 · 不捕捉 · 不售卖 · 不商业放飞</p>
+    <p>© 云虫秘境项目组</p>
+  </footer>
+
+  <script src="js/interact.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 · 云虫秘境</title>
+  <meta name="description" content="云虫秘境：数据口径、来源与核验、术语规范与已知局限">
+  <link rel="stylesheet" href="css/style.css?v=11">
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="species.html">物种库</a></li>
+      <li><a href="expedition.html">云南寻虫</a></li>
+      <li><a href="course.html">科学课程</a></li>
+      <li><a href="interact.html">互动区</a></li>
+      <li><a href="my.html">我的</a></li>
+      <li><a href="about.html" class="active">关于</a></li>
+    </ul>
+  </nav>
+
+  <main class="about-wrap">
+    <!-- 顶部标题区 -->
+    <header class="about-hero">
+      <p class="hero-kicker">ABOUT · DATA SPECIFICATION</p>
+      <h1 class="hero-title">关于·数据规范</h1>
+      <p class="hero-lead">一份能查、能核、能引用的区域昆虫数据——口径从哪里来、边界在哪里、哪些还不知道，都写在这里。</p>
+    </header>
+
+    <!-- 左侧锚点导航 -->
+    <aside class="about-nav" id="about-nav">
+      <ul>
+        <li><a href="#origin" class="active">网站由来</a></li>
+        <li><a href="#what">这个库是什么</a></li>
+        <li><a href="#fields">字段定义</a></li>
+        <li><a href="#terms">术语运用规范</a></li>
+        <li><a href="#model">三维模型怎么来的</a></li>
+        <li><a href="#sources">来源与核验</a></li>
+        <li><a href="#protection">保护等级怎么读</a></li>
+        <li><a href="#references">参考资料库</a></li>
+        <li><a href="#limits">已知局限</a></li>
+        <li><a href="#cite">引用与更新</a></li>
+      </ul>
+    </aside>
+
+    <!-- 右侧内容区 -->
+    <div class="about-content">
+
+      <section id="origin" class="about-sec">
+        <p class="origin-kicker">SECTION 01</p>
+        <h1 class="sec-title">网站由来</h1>
+        <p>云虫秘境源于云南大学大学生创新创业训练计划（大创）项目，围绕云南南部（红河州金平、屏边、河口一带）的昆虫多样性与乡村文旅展开展。团队在野外采集、标本整理与影像记录的基础上，希望把一份「能查、能核、能引用」的昆虫数据，做成面向公众开放的数字标本科普馆。</p>
+        <h2>三条不可逾越的底线（三不原则）</h2>
+        <div class="bottom-lines">
+          <article class="bottom-card">
+            <span class="bl-icon" style="color:#4a9e6e">⊘</span>
+            <h3>不捕捉</h3>
+            <p>本项目的影像与记录以观察、拍摄为主，不采集、不伤害野生昆虫。</p>
+          </article>
+          <article class="bottom-card">
+            <span class="bl-icon" style="color:#b8956a">⊘</span>
+            <h3>不售卖</h3>
+            <p>不售卖野生昆虫活体，也不为任何形式的活体交易提供信息或渠道。</p>
+          </article>
+          <article class="bottom-card">
+            <span class="bl-icon" style="color:#9b8ec4">⊘</span>
+            <h3>不商业放飞</h3>
+            <p>不组织、不参与以观赏为目的的商业放飞，避免外来物种逃逸与本地种群的人为扰动。</p>
+          </article>
+        </div>
+        <p class="origin-quote">野外观测时，我们坚持「只观察、不打扰、不带走」——照片和记录可以带走，虫子和它的栖息地留下。</p>
+      </section>
+
+      <section id="what" class="about-sec">
+        <h2>这个库是什么</h2>
+        <p>云虫秘境是一个区域性的昆虫物种数据库，样本区域为云南——从滇南热带雨林到滇西北高山，沿海拔梯度五站。当前收录80条记录，分属9目。</p>
+        <p class="about-note">收录口径：在云南有明确分布记录、且能在野外被观察到的昆虫。只到属级、无法确定到种的观察不单独建记录，标注「待鉴定」，避免凑数。</p>
+      </section>
+
+      <section id="fields" class="about-sec">
+        <h2>字段定义</h2>
+        <div class="about-table-wrap">
+          <table class="about-table">
+            <thead><tr><th>字段</th><th>类型</th><th>定义与填写规则</th></tr></thead>
+            <tbody>
+              <tr><td>分类地位</td><td class="f-type t-taxonomy">taxonomy</td><td>目、科、属与拉丁学名，逐条核对至属级</td></tr>
+              <tr><td>形态特征</td><td class="f-type t-morphology">morphology</td><td>野外可用的识别特征，优先写区分近似种的性状</td></tr>
+              <tr><td>习性</td><td class="f-type t-habit">habit</td><td>生活史、取食、繁殖、迁飞等行为</td></tr>
+              <tr><td>生境</td><td class="f-type t-habitat">habitat</td><td>实际观察到的栖息环境，标注海拔或植被类型</td></tr>
+              <tr><td>分布</td><td class="f-type t-distribution">distribution</td><td>以云南为主，另注国内其余分布</td></tr>
+              <tr><td>寄主与食性</td><td class="f-type">host</td><td>植食记寄主植物，捕食记猎物，腐食记基质</td></tr>
+              <tr><td>海拔区间</td><td class="f-type">altitude</td><td>单位米，仅在有调查记录时填写，无记录留空</td></tr>
+              <tr><td>成虫出现月份</td><td class="f-type">months</td><td>以成虫被观察到的月份计</td></tr>
+              <tr><td>体长与翅展</td><td class="f-type">size</td><td>单位毫米。蝶蛾记翅展，其余记体长</td></tr>
+              <tr><td>保护等级</td><td class="f-type">protection</td><td>依国家重点保护野生动物名录</td></tr>
+              <tr><td>影像</td><td class="f-type">media</td><td>实拍微距影像，附拍摄者与档案编号</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="terms" class="about-sec">
+        <h2>术语运用规范</h2>
+        <p><b>分类阶元口径</b>——以《中国生物物种名录》为准，异名与亚种不单独建记录。中文名与学名并列，学名用斜体。</p>
+        <p><b>保护等级口径</b>——以国家林业和草原局名录为准，不自行添加或抬高等级。</p>
+        <p><b>数据分级口径</b>——</p>
+        <ul>
+          <li><span class="tag-verified">已核验</span>有公开权威来源支撑（名录、官方发布、分类学著作、研究级观察）</li>
+          <li><span class="tag-pending">待核验</span>暂缺可靠来源，显示「待核验」，不编造数据</li>
+        </ul>
+        <p><b>生态伦理术语</b>——全站统一「三不原则」与「只观察、不打扰、不带走」。</p>
+      </section>
+
+      <section id="model" class="about-sec">
+        <h2>三维模型怎么来的</h2>
+        <p class="about-note">（二期内容，首期不上3D）</p>
+        <p>模型由项目组Blender自建，非标本扫描件。体型骨架取自目科级共有构造（头胸腹三段、三对足、两对翅），再按记录里的翅长、体长、翅形逐项赋值。</p>
+        <p><b>哪些部分可靠：</b>分节数量、体段比例、翅形轮廓、足的位置、触角类型——这些是科一级硬特征。</p>
+        <p><b>哪些只是示意：</b>翅面斑纹具体位置、体色精确色号——这些在不同个体间差异很大，不承诺与某张照片逐点对应。</p>
+      </section>
+
+      <section id="sources" class="about-sec">
+        <h2>来源与核验</h2>
+        <ul>
+          <li>团队自摄影像，标注拍摄条件与拍摄者</li>
+          <li>外部配图逐张注明作者、许可与来源，取自iNaturalist研究级观察和Wikimedia Commons（CC-BY/CC0）</li>
+          <li>分类依据《中国生物物种名录》</li>
+          <li>保护等级依据2021年第3号公告与2023年第17号公告</li>
+          <li>4个待鉴定种（铁甲、红色金属叶甲、红黑长毛蚁、红蝽）为项目组自摄，正式上线前须请昆虫学专家鉴定到种</li>
+        </ul>
+      </section>
+
+      <section id="protection" class="about-sec">
+        <h2>保护等级怎么读</h2>
+        <p>「国家一级」= 国家重点保护野生动物名录一级</p>
+        <p>「国家二级」= 国家重点保护野生动物名录二级</p>
+        <p>未列入者不标注，不等于无需保护。</p>
+      </section>
+
+      <section id="references" class="about-sec">
+        <h2>参考资料库</h2>
+        <ul class="ref-list">
+          <li>中国动物志（昆虫卷）</li>
+          <li>昆明动物所森林昆虫数据库</li>
+          <li>云南蝴蝶名录（昆明动物所，6科356属1300种）</li>
+          <li>云南蜻蜓名录（210种16科82属）</li>
+          <li>iNaturalist云南观察记录</li>
+          <li>Wikimedia Commons</li>
+        </ul>
+      </section>
+
+      <section id="limits" class="about-sec">
+        <h2>已知局限</h2>
+        <ul>
+          <li>4个物种待鉴定，数据暂缺</li>
+          <li>海拔范围为文献记录，非本项目实测</li>
+          <li>成虫出现月份为文献记录，实际因年份和气候有波动</li>
+          <li>3D模型为二期内容，首期全部2D</li>
+          <li>移动端适配后续完成</li>
+        </ul>
+      </section>
+
+      <section id="cite" class="about-sec">
+        <h2>引用与更新</h2>
+        <p class="cite-block">引用格式：云虫秘境项目组. 2026. 物种名（拉丁学名）. 云南昆虫物种数据库, 记录号 YN-XXX-000X.</p>
+        <p>本站持续更新，勘误请联系项目组。</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="principles">低干扰观测 · 不捕捉 · 不售卖 · 不商业放飞</p>
+    <p>© 云虫秘境项目组 · 云南大学学术指导</p>
+  </footer>
+
+  <script src="js/about.js"></script>
+</body>
+</html>

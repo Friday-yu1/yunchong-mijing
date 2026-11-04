@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的 · 云虫秘境</title>
+  <meta name="description" content="个人中心：收藏、打卡、徽章、课程记录与作品">
+  <link rel="stylesheet" href="css/style.css?v=7">
+</head>
+<body data-mode="visitor">
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="species.html">物种库</a></li>
+      <li><a href="expedition.html">云南寻虫</a></li>
+      <li><a href="course.html">科学课程</a></li>
+      <li><a href="interact.html">互动区</a></li>
+      <li><a href="my.html" class="active">我的</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- 页头 + 模式切换 -->
+    <header class="interact-header">
+      <h1>我的</h1>
+      <div class="mode-toggle" id="mode-toggle" role="tablist" aria-label="模式切换">
+        <button type="button" class="mode-btn active" data-mode="visitor">普通访客模式</button>
+        <button type="button" class="mode-btn" data-mode="student">课程学生模式</button>
+      </div>
+    </header>
+
+    <!-- 通用：个人数字档案 -->
+    <section class="archive-section">
+      <div class="archive-stats" id="archive-stats"></div>
+
+      <div class="archive-cols">
+        <div class="archive-card">
+          <h2>收藏列表</h2>
+          <ul class="fav-list" id="fav-list"></ul>
+        </div>
+        <div class="archive-card">
+          <h2>五站打卡</h2>
+          <ul class="checkin-list" id="checkin-list"></ul>
+          <label class="night-toggle">
+            <input type="checkbox" id="night-flag">
+            <span>参加过夜间灯诱观测</span>
+          </label>
+        </div>
+        <div class="archive-card">
+          <h2>徽章墙</h2>
+          <div class="badge-grid" id="badge-grid"></div>
+        </div>
+      </div>
+
+      <div class="io-row">
+        <button type="button" class="io-btn" id="export-btn">导出 JSON</button>
+        <button type="button" class="io-btn" id="import-btn">导入 JSON</button>
+        <input type="file" id="import-file" accept=".json" hidden>
+        <span class="io-msg" id="io-msg"></span>
+      </div>
+    </section>
+
+    <!-- 学生模式专属 -->
+    <section class="student-zone" id="student-zone" hidden>
+      <div class="course-record-section">
+        <div class="archive-card record-card">
+          <h2>我的课程记录</h2>
+          <ul class="record-list" id="record-list"></ul>
+        </div>
+        <div class="archive-card record-card">
+          <h2>课程徽章</h2>
+          <div class="badge-grid" id="course-badge-grid"></div>
+        </div>
+      </div>
+
+      <div class="course-record-section">
+        <div class="archive-card record-card">
+          <h2>手工作品上传</h2>
+          <form class="feedback-form" id="work-form">
+            <label>作品名称<input type="text" id="work-name" required maxlength="30" placeholder="如：凤蝶标本手绘"></label>
+            <label>所属课程
+              <select id="work-course">
+                <option value="">不限 / 自由创作</option>
+              </select>
+            </label>
+            <label class="form-file">作品照片<span class="file-btn" id="work-file-btn" tabindex="0" role="button">选择文件</span>
+              <input type="file" id="work-photo" accept="image/*" hidden>
+              <span class="file-name" id="work-file-name">未选择照片（仅记录文件名）</span>
+            </label>
+            <label>作品说明<textarea id="work-text" rows="2" maxlength="200" placeholder="用了什么材料、想表达什么……"></textarea></label>
+            <button type="submit" class="note-submit">上传作品</button>
+          </form>
+          <div class="work-gallery" id="work-gallery"></div>
+        </div>
+        <div class="archive-card record-card">
+          <h2>课程反馈</h2>
+          <form class="feedback-form" id="feedback-form">
+            <label>课程名称
+              <select id="fb-course" required>
+                <option value="">请选择课程</option>
+              </select>
+            </label>
+            <label>评分
+              <span class="star-row" id="star-row">
+                <input type="radio" name="fb-star" value="1" id="star1"><label for="star1" title="1星">★</label>
+                <input type="radio" name="fb-star" value="2" id="star2"><label for="star2" title="2星">★</label>
+                <input type="radio" name="fb-star" value="3" id="star3"><label for="star3" title="3星">★</label>
+                <input type="radio" name="fb-star" value="4" id="star4"><label for="star4" title="4星">★</label>
+                <input type="radio" name="fb-star" value="5" id="star5"><label for="star5" title="5星">★</label>
+              </span>
+            </label>
+            <label>反馈内容
+              <textarea id="fb-text" rows="3" maxlength="300" placeholder="这门课哪里好、哪里可以改进……"></textarea>
+            </label>
+            <label>你的昵称（选填）
+              <input type="text" id="fb-name" maxlength="20" placeholder="匿名也可以">
+            </label>
+            <button type="submit" class="note-submit">提交反馈</button>
+            <p class="fb-msg" id="fb-msg" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="principles">低干扰观测 · 不捕捉 · 不售卖 · 不商业放飞</p>
+    <p>© 云虫秘境项目组 · 云南大学学术指导</p>
+  </footer>
+
+  <script src="js/species-data.js"></script>
+  <script src="js/my.js"></script>
+</body>
+</html>
