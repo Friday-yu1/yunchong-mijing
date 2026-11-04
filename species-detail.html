@@ -1,64 +1,64 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>物种详情 · 云虫秘境</title>
-  <link rel="stylesheet" href="css/style.css?v=17">
+  <title>鐗╃璇︽儏 路 浜戣櫕绉樺</title>
+  <link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
-  <!-- 顶部导航（与首页/物种库一致） -->
+  <!-- 椤堕儴瀵艰埅锛堜笌棣栭〉/鐗╃搴撲竴鑷达級 -->
   <nav class="site-nav">
-    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <a href="index.html" class="nav-logo">浜戣櫕绉樺</a>
     <div class="nav-links">
-      <a href="index.html">首页</a>
-      <a href="species.html">物种图鉴</a>
+      <a href="index.html">棣栭〉</a>
+      <a href="species.html">鐗╃鍥鹃壌</a>
     </div>
   </nav>
 
   <main class="detail-wrap" id="detail-root">
     <div class="detail-grid">
-      <!-- 左栏：大图 + 对比滑杆 + 档案信息区 -->
+      <!-- 宸︽爮锛氬ぇ鍥?+ 瀵规瘮婊戞潌 + 妗ｆ淇℃伅鍖?-->
       <section class="detail-left">
-      <!-- 面包屑 -->
-      <nav class="crumbs" id="crumbs" aria-label="面包屑">
-        <a href="species.html">物种库</a><span> / </span><span id="crumb-order"></span><span> / </span><span id="crumb-family"></span><span> / </span><b id="crumb-species"></b>
+      <!-- 闈㈠寘灞?-->
+      <nav class="crumbs" id="crumbs" aria-label="闈㈠寘灞?>
+        <a href="species.html">鐗╃搴?/a><span> / </span><span id="crumb-order"></span><span> / </span><span id="crumb-family"></span><span> / </span><b id="crumb-species"></b>
       </nav>
 
-        <div class="stage-tabs" role="tablist" aria-label="影像切换">
-          <button type="button" class="stage-tab active" data-stage="photo" role="tab" aria-selected="true">2D 实拍照片</button>
-          <button type="button" class="stage-tab" data-stage="model" role="tab" aria-selected="false">3D 模型</button>
+        <div class="stage-tabs" role="tablist" aria-label="褰卞儚鍒囨崲">
+          <button type="button" class="stage-tab active" data-stage="photo" role="tab" aria-selected="true">2D 瀹炴媿鐓х墖</button>
+          <button type="button" class="stage-tab" data-stage="model" role="tab" aria-selected="false">3D 妯″瀷</button>
         </div>
         <div class="photo-stage" id="photo-stage">
           <img class="stage-img" id="detail-img" alt="" hidden>
-          <div class="stage-placeholder" id="stage-ph" hidden>微距影像整理中</div>
+          <div class="stage-placeholder" id="stage-ph" hidden>寰窛褰卞儚鏁寸悊涓?/div>
           <div class="stage-thumbs" id="stage-thumbs" hidden></div>
           <p class="img-credit" id="img-credit"></p>
         </div>
         <div class="photo-stage model-stage" id="model-stage" hidden>
           <div class="stage-placeholder">
-            <span class="model-badge">二期功能</span>
-            3D 形态模型 · 建模中<br>
-            <small>骨架取自目级共有构造，翅形/体长按档案赋值；上线后可旋转缩放查看</small>
+            <span class="model-badge">浜屾湡鍔熻兘</span>
+            3D 褰㈡€佹ā鍨?路 寤烘ā涓?br>
+            <small>楠ㄦ灦鍙栬嚜鐩骇鍏辨湁鏋勯€狅紝缈呭舰/浣撻暱鎸夋。妗堣祴鍊硷紱涓婄嚎鍚庡彲鏃嬭浆缂╂斁鏌ョ湅</small>
           </div>
         </div>
-        <!-- 形态热区功能二期上线，当前不再预留提示位 -->
+        <!-- 褰㈡€佺儹鍖哄姛鑳戒簩鏈熶笂绾匡紝褰撳墠涓嶅啀棰勭暀鎻愮ず浣?-->
 
-        <!-- 相似种对比（滑杆） -->
+        <!-- 鐩镐技绉嶅姣旓紙婊戞潌锛?-->
         <div class="compare-box">
-          <p class="compare-title" id="compare-title">相似种对比</p>
+          <p class="compare-title" id="compare-title">鐩镐技绉嶅姣?/p>
           <div class="compare-track" id="compare-track">
-            <div class="compare-pane pane-a" id="pane-a"><span class="pane-tag">本种</span></div>
-            <div class="compare-pane pane-b" id="pane-b"><span class="pane-tag">相似种</span></div>
+            <div class="compare-pane pane-a" id="pane-a"><span class="pane-tag">鏈</span></div>
+            <div class="compare-pane pane-b" id="pane-b"><span class="pane-tag">鐩镐技绉?/span></div>
             <div class="compare-divider" id="compare-divider"></div>
           </div>
           <input type="range" id="compare-range" min="5" max="95" value="50"
-                 aria-label="拖动对比本种与相似种">
+                 aria-label="鎷栧姩瀵规瘮鏈涓庣浉浼肩">
           <p class="compare-tips" id="compare-tips"></p>
-          <p class="compare-credit">对比种照片来源：Wikimedia Commons / iNaturalist（CC 许可）</p>
+          <p class="compare-credit">瀵规瘮绉嶇収鐗囨潵婧愶細Wikimedia Commons / iNaturalist锛圕C 璁稿彲锛?/p>
         </div>
 
-        <!-- 档案信息区 -->
+        <!-- 妗ｆ淇℃伅鍖?-->
         <div class="detail-info">
           <h1 class="detail-name" id="d-name"></h1>
           <p class="detail-latin" id="d-latin"></p>
@@ -66,49 +66,49 @@
           <p class="detail-intro" id="d-intro"></p>
 
           <section class="info-sec">
-            <h2>野外识别</h2>
+            <h2>閲庡璇嗗埆</h2>
             <ol class="id-points" id="d-idpoints"></ol>
           </section>
           <section class="info-sec">
-            <h2>形态特征</h2>
+            <h2>褰㈡€佺壒寰?/h2>
             <p id="d-morph"></p>
           </section>
           <section class="info-sec">
-            <h2>习性</h2>
+            <h2>涔犳€?/h2>
             <p id="d-behavior"></p>
           </section>
           <section class="info-sec">
-            <h2>生境</h2>
+            <h2>鐢熷</h2>
             <p id="d-habitat"></p>
           </section>
           <section class="info-sec">
-            <h2>分布</h2>
+            <h2>鍒嗗竷</h2>
             <p id="d-dist"></p>
           </section>
           <section class="info-sec">
-            <h2>寄主与食性</h2>
+            <h2>瀵勪富涓庨鎬?/h2>
             <p id="d-hosts"></p>
           </section>
 
           <div class="month-bar-wrap">
-            <h2>成虫期</h2>
-            <div class="month-bar" id="month-bar" aria-label="成虫出现月份"></div>
+            <h2>鎴愯櫕鏈?/h2>
+            <div class="month-bar" id="month-bar" aria-label="鎴愯櫕鍑虹幇鏈堜唤"></div>
           </div>
 
           <p class="photo-credit" id="d-credit"></p>
         </div>
       </section>
 
-      <!-- 右栏：分类地位 / 快速事实 / 引用格式 -->
+      <!-- 鍙虫爮锛氬垎绫诲湴浣?/ 蹇€熶簨瀹?/ 寮曠敤鏍煎紡 -->
       <aside class="detail-right">
         <section class="side-card">
-          <h2>分类地位</h2>
+          <h2>鍒嗙被鍦颁綅</h2>
           <ul class="tax-ladder">
-            <li><span class="tax-rank">目</span><span class="tax-val" id="t-order"></span></li>
-            <li><span class="tax-rank">科</span><span class="tax-val" id="t-family"></span></li>
-            <li><span class="tax-rank">属</span><span class="tax-val" id="t-genus"></span></li>
+            <li><span class="tax-rank">鐩?/span><span class="tax-val" id="t-order"></span></li>
+            <li><span class="tax-rank">绉?/span><span class="tax-val" id="t-family"></span></li>
+            <li><span class="tax-rank">灞?/span><span class="tax-val" id="t-genus"></span></li>
             <li>
-              <span class="tax-rank">种</span>
+              <span class="tax-rank">绉?/span>
               <span class="tax-val tax-species"><b id="t-zh"></b><i id="t-latin"></i></span>
             </li>
           </ul>
@@ -116,7 +116,7 @@
         </section>
 
         <section class="side-card">
-          <h2>记录完整度</h2>
+          <h2>璁板綍瀹屾暣搴?/h2>
           <div class="pct-line">
             <span class="pct-bar big"><i id="pct-fill"></i></span>
             <b class="pct-num" id="pct-val"></b>
@@ -125,37 +125,38 @@
         </section>
 
         <section class="side-card">
-          <h2>快速事实</h2>
+          <h2>蹇€熶簨瀹?/h2>
           <dl class="fact-table" id="fact-table"></dl>
         </section>
 
         <section class="side-card">
-          <h2>引用格式</h2>
+          <h2>寮曠敤鏍煎紡</h2>
           <p class="cite-text" id="cite-text"></p>
-          <button type="button" class="cite-copy" id="cite-copy">复制引用</button>
+          <button type="button" class="cite-copy" id="cite-copy">澶嶅埗寮曠敤</button>
         </section>
 
         <div class="detail-actions">
-          <button type="button" class="btn-primary" id="fav-btn">收藏加入个人档案</button>
-          <a class="btn-secondary" href="species.html">返回物种库</a>
+          <button type="button" class="btn-primary" id="fav-btn">鏀惰棌鍔犲叆涓汉妗ｆ</button>
+          <a class="btn-secondary" href="species.html">杩斿洖鐗╃搴?/a>
         </div>
       </aside>
     </div>
 
-    <!-- 上一个 / 下一个 -->
+    <!-- 涓婁竴涓?/ 涓嬩竴涓?-->
     <nav class="detail-pager">
-      <a href="#" class="pager-btn" id="prev-link">← 上一个种</a>
-      <a href="#" class="pager-btn" id="next-link">下一个种 →</a>
+      <a href="#" class="pager-btn" id="prev-link">鈫?涓婁竴涓</a>
+      <a href="#" class="pager-btn" id="next-link">涓嬩竴涓 鈫?/a>
     </nav>
   </main>
 
   <footer class="site-footer">
-    <p>低干扰观测 · 不捕捉 · 不售卖 · 不商业放飞</p>
-    <p>© 云虫秘境项目组 · 云南大学学术指导</p>
+    <p>浣庡共鎵拌娴?路 涓嶆崟鎹?路 涓嶅敭鍗?路 涓嶅晢涓氭斁椋?/p>
+    <p>漏 浜戣櫕绉樺椤圭洰缁?路 浜戝崡澶у瀛︽湳鎸囧</p>
   </footer>
 
-  <script src="js/species-data.js?v=2"></script>
-  <script src="js/species-images.js?v=2"></script>
-  <script src="js/species-detail.js?v=9"></script>
+  <script src="species-data.js?v=2"></script>
+  <script src="species-images.js?v=2"></script>
+  <script src="species-detail.js?v=9"></script>
 </body>
 </html>
+

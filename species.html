@@ -1,110 +1,111 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>物种库 · 云虫秘境</title>
-  <meta name="description" content="80种云南昆虫形态档案 · 9个目 · 沿生态梯度检索">
-  <link rel="stylesheet" href="css/style.css?v=16">
+  <title>鐗╃搴?路 浜戣櫕绉樺</title>
+  <meta name="description" content="80绉嶄簯鍗楁槅铏舰鎬佹。妗?路 9涓洰 路 娌跨敓鎬佹搴︽绱?>
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
   <nav class="nav">
-    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <a href="index.html" class="nav-logo">浜戣櫕绉樺</a>
     <ul class="nav-links">
-      <li><a href="index.html">首页</a></li>
-      <li><a href="species.html" class="active">物种库</a></li>
-      <li><a href="expedition.html">云南寻虫</a></li>
-      <li><a href="course.html">科学课程</a></li>
-      <li><a href="interact.html">互动区</a></li>
-      <li><a href="my.html">我的</a></li>
-      <li><a href="about.html">关于</a></li>
+      <li><a href="index.html">棣栭〉</a></li>
+      <li><a href="species.html" class="active">鐗╃搴?/a></li>
+      <li><a href="expedition.html">浜戝崡瀵昏櫕</a></li>
+      <li><a href="course.html">绉戝璇剧▼</a></li>
+      <li><a href="interact.html">浜掑姩鍖?/a></li>
+      <li><a href="my.html">鎴戠殑</a></li>
+      <li><a href="about.html">鍏充簬</a></li>
     </ul>
   </nav>
 
   <main>
-    <!-- 页头 -->
+    <!-- 椤靛ご -->
     <header class="species-header">
-      <h1>物种图鉴</h1>
-      <p class="species-subtitle">80种云南昆虫形态档案</p>
+      <h1>鐗╃鍥鹃壌</h1>
+      <p class="species-subtitle">80绉嶄簯鍗楁槅铏舰鎬佹。妗?/p>
     </header>
 
     <div class="species-layout">
-      <!-- 左侧分类导航 -->
+      <!-- 宸︿晶鍒嗙被瀵艰埅 -->
       <aside class="species-side">
         <div class="side-group">
-          <h3>按目浏览</h3>
+          <h3>鎸夌洰娴忚</h3>
           <ul class="side-list" id="side-orders"></ul>
         </div>
         <div class="side-group">
-          <h3>按生态站</h3>
+          <h3>鎸夌敓鎬佺珯</h3>
           <ul class="side-list" id="side-bands"></ul>
         </div>
         <div class="side-group">
-          <h3>保护等级</h3>
+          <h3>淇濇姢绛夌骇</h3>
           <ul class="side-list" id="side-protect"></ul>
         </div>
         <div class="side-group">
-          <h3>成虫月份</h3>
+          <h3>鎴愯櫕鏈堜唤</h3>
           <div class="side-months" id="side-months"></div>
         </div>
         <div class="side-group">
-          <h3>食性</h3>
+          <h3>椋熸€?/h3>
           <ul class="side-list" id="side-diet"></ul>
         </div>
-        <button type="button" class="side-reset" id="side-reset">重置全部筛选</button>
+        <button type="button" class="side-reset" id="side-reset">閲嶇疆鍏ㄩ儴绛涢€?/button>
       </aside>
 
-      <!-- 右侧主区 -->
+      <!-- 鍙充晶涓诲尯 -->
       <div class="species-main">
         <div class="species-toolbar">
           <input type="search" id="species-search" class="search-input"
-                 placeholder="搜索中文名或拉丁学名…" aria-label="搜索物种">
-          <label class="sort-label">排序
-            <select id="species-sort" aria-label="排序方式">
-              <option value="code">按档案编号</option>
-              <option value="alt">按海拔（低→高）</option>
-              <option value="size">按翅展/体长（小→大）</option>
+                 placeholder="鎼滅储涓枃鍚嶆垨鎷変竵瀛﹀悕鈥? aria-label="鎼滅储鐗╃">
+          <label class="sort-label">鎺掑簭
+            <select id="species-sort" aria-label="鎺掑簭鏂瑰紡">
+              <option value="code">鎸夋。妗堢紪鍙?/option>
+              <option value="alt">鎸夋捣鎷旓紙浣庘啋楂橈級</option>
+              <option value="size">鎸夌繀灞?浣撻暱锛堝皬鈫掑ぇ锛?/option>
             </select>
           </label>
-          <div class="view-toggle" id="view-toggle" role="group" aria-label="视图切换">
-            <button type="button" class="view-btn active" data-view="cards" aria-pressed="true">卡片</button>
-            <button type="button" class="view-btn" data-view="table" aria-pressed="false">表格</button>
+          <div class="view-toggle" id="view-toggle" role="group" aria-label="瑙嗗浘鍒囨崲">
+            <button type="button" class="view-btn active" data-view="cards" aria-pressed="true">鍗＄墖</button>
+            <button type="button" class="view-btn" data-view="table" aria-pressed="false">琛ㄦ牸</button>
           </div>
         </div>
 
         <div class="result-line"><span class="species-count" id="species-count"></span></div>
 
-        <!-- 卡片视图 -->
+        <!-- 鍗＄墖瑙嗗浘 -->
         <section class="species-grid" id="species-grid" aria-live="polite"></section>
 
-        <!-- 表格视图 -->
+        <!-- 琛ㄦ牸瑙嗗浘 -->
         <section class="species-table-wrap" id="species-table-wrap" hidden>
           <table class="species-table">
             <thead>
               <tr>
-                <th>档案编号</th><th>中文名</th><th>拉丁学名</th><th>目</th>
-                <th>生态站</th><th>保护等级</th><th>完整度</th>
+                <th>妗ｆ缂栧彿</th><th>涓枃鍚?/th><th>鎷変竵瀛﹀悕</th><th>鐩?/th>
+                <th>鐢熸€佺珯</th><th>淇濇姢绛夌骇</th><th>瀹屾暣搴?/th>
               </tr>
             </thead>
             <tbody id="species-tbody"></tbody>
           </table>
         </section>
 
-        <p class="species-empty" id="species-empty" hidden>没有匹配的物种，换个关键词或筛选条件试试。</p>
+        <p class="species-empty" id="species-empty" hidden>娌℃湁鍖归厤鐨勭墿绉嶏紝鎹釜鍏抽敭璇嶆垨绛涢€夋潯浠惰瘯璇曘€?/p>
 
-        <!-- 分页 -->
-        <nav class="species-pager" id="species-pager" aria-label="分页"></nav>
+        <!-- 鍒嗛〉 -->
+        <nav class="species-pager" id="species-pager" aria-label="鍒嗛〉"></nav>
       </div>
     </div>
   </main>
 
   <footer class="footer">
-    <p class="principles">低干扰观测 · 不捕捉 · 不售卖 · 不商业放飞</p>
-    <p>© 云虫秘境项目组 · 云南大学学术指导</p>
+    <p class="principles">浣庡共鎵拌娴?路 涓嶆崟鎹?路 涓嶅敭鍗?路 涓嶅晢涓氭斁椋?/p>
+    <p>漏 浜戣櫕绉樺椤圭洰缁?路 浜戝崡澶у瀛︽湳鎸囧</p>
   </footer>
 
-  <script src="js/species-data.js?v=2"></script>
-  <script src="js/species-images.js?v=2"></script>
-  <script src="js/species.js?v=5"></script>
+  <script src="species-data.js?v=2"></script>
+  <script src="species-images.js?v=2"></script>
+  <script src="species.js?v=5"></script>
 </body>
 </html>
+

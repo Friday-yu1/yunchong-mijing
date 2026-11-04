@@ -1,32 +1,32 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>云虫秘境 · 云南昆虫沉浸式图鉴</title>
-  <meta name="description" content="沿云南生态梯度，探索80种暗夜昆虫的博物志">
-  <link rel="stylesheet" href="css/style.css?v=14">
+  <title>浜戣櫕绉樺 路 浜戝崡鏄嗚櫕娌夋蹈寮忓浘閴?/title>
+  <meta name="description" content="娌夸簯鍗楃敓鎬佹搴︼紝鎺㈢储80绉嶆殫澶滄槅铏殑鍗氱墿蹇?>
+  <link rel="stylesheet" href="style.css?v=14">
 </head>
 <body>
 
-  <!-- 导航栏 -->
+  <!-- 瀵艰埅鏍?-->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">云虫秘境</a>
+    <a href="index.html" class="nav-logo">浜戣櫕绉樺</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">首页</a></li>
-      <li><a href="species.html">物种库</a></li>
-      <li><a href="expedition.html">云南寻虫</a></li>
-      <li><a href="course.html">科学课程</a></li>
-      <li><a href="interact.html">互动区</a></li>
-      <li><a href="my.html">我的</a></li>
-      <li><a href="about.html">关于</a></li>
+      <li><a href="index.html" class="active">棣栭〉</a></li>
+      <li><a href="species.html">鐗╃搴?/a></li>
+      <li><a href="expedition.html">浜戝崡瀵昏櫕</a></li>
+      <li><a href="course.html">绉戝璇剧▼</a></li>
+      <li><a href="interact.html">浜掑姩鍖?/a></li>
+      <li><a href="my.html">鎴戠殑</a></li>
+      <li><a href="about.html">鍏充簬</a></li>
     </ul>
   </nav>
 
-  <!-- 粒子画布（站点切换瞬间的萤火） -->
+  <!-- 绮掑瓙鐢诲竷锛堢珯鐐瑰垏鎹㈢灛闂寸殑钀ょ伀锛?-->
   <canvas id="gradient-fireflies" aria-hidden="true"></canvas>
 
-  <!-- 海拔梯度指示线（左侧固定，贯穿五站，移动端隐藏） -->
+  <!-- 娴锋嫈姊害鎸囩ず绾匡紙宸︿晶鍥哄畾锛岃疮绌夸簲绔欙紝绉诲姩绔殣钘忥級 -->
   <div class="elevation-rail" aria-hidden="true">
     <span class="rail-line"></span>
     <span class="rail-dot dot-s5"><i></i><em>4000m</em></span>
@@ -36,16 +36,16 @@
     <span class="rail-dot dot-s1"><i></i><em>500m</em></span>
   </div>
 
-  <!-- 生态梯度动线：五站逐屏下探 -->
+  <!-- 鐢熸€佹搴﹀姩绾匡細浜旂珯閫愬睆涓嬫帰 -->
   <main>
-    <!-- 第一站 · 滇南热带雨林 -->
+    <!-- 绗竴绔?路 婊囧崡鐑甫闆ㄦ灄 -->
     <section class="station station-1" id="station-1" data-accent="#4a9e6e">
       <div class="layer-far" aria-hidden="true">
         <span class="blob blob-a"></span>
         <span class="blob blob-b"></span>
       </div>
       <div class="layer-front sil-mantis" aria-hidden="true">
-        <svg viewBox="0 0 220 320" role="img" aria-label="丽眼斑螳剪影">
+        <svg viewBox="0 0 220 320" role="img" aria-label="涓界溂鏂戣灣鍓奖">
           <g fill="currentColor" stroke="none">
             <path d="M96 34 Q80 10 58 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
             <path d="M124 34 Q140 10 162 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -60,25 +60,25 @@
         </svg>
       </div>
       <div class="station-content">
-        <p class="station-index">第一站 · 低地雨林</p>
-        <h2 class="station-name">滇南热带雨林</h2>
-        <p class="station-poem">雨脚落进叶隙的瞬间，林下亮起一百双安静的眼睛。</p>
+        <p class="station-index">绗竴绔?路 浣庡湴闆ㄦ灄</p>
+        <h2 class="station-name">婊囧崡鐑甫闆ㄦ灄</h2>
+        <p class="station-poem">闆ㄨ剼钀借繘鍙堕殭鐨勭灛闂达紝鏋椾笅浜捣涓€鐧惧弻瀹夐潤鐨勭溂鐫涖€?/p>
         <p class="station-bug">
-          <span class="bug-name">丽眼斑螳</span>
+          <span class="bug-name">涓界溂鏂戣灣</span>
           <span class="bug-latin">Creobroter gemmatus</span>
         </p>
-        <a class="btn-station" href="species.html?band=rainforest">去看本站代表虫种</a>
+        <a class="btn-station" href="species.html?band=rainforest">鍘荤湅鏈珯浠ｈ〃铏</a>
       </div>
     </section>
 
-    <!-- 第二站 · 哀牢云雾林 -->
+    <!-- 绗簩绔?路 鍝€鐗簯闆炬灄 -->
     <section class="station station-2" id="station-2" data-accent="#b8956a">
       <div class="layer-far" aria-hidden="true">
         <span class="blob blob-a"></span>
         <span class="blob blob-b"></span>
       </div>
       <div class="layer-front sil-stag" aria-hidden="true">
-        <svg viewBox="0 0 320 280" role="img" aria-label="巨叉锹甲剪影">
+        <svg viewBox="0 0 320 280" role="img" aria-label="宸ㄥ弶閿圭敳鍓奖">
           <g fill="currentColor" stroke="none">
             <path d="M120 44 Q94 10 56 6 Q84 16 88 36 Q97 24 113 28 Q117 42 124 56 Z"/>
             <path d="M200 44 Q226 10 264 6 Q236 16 232 36 Q223 24 207 28 Q203 42 196 56 Z"/>
@@ -97,25 +97,25 @@
         </svg>
       </div>
       <div class="station-content">
-        <p class="station-index">第二站 · 云雾深处</p>
-        <h2 class="station-name">哀牢云雾林</h2>
-        <p class="station-poem">雾从梯田爬上来，把整座山的甲虫都裹进湿漉漉的夜里。</p>
+        <p class="station-index">绗簩绔?路 浜戦浘娣卞</p>
+        <h2 class="station-name">鍝€鐗簯闆炬灄</h2>
+        <p class="station-poem">闆句粠姊敯鐖笂鏉ワ紝鎶婃暣搴у北鐨勭敳铏兘瑁硅繘婀挎級婕夌殑澶滈噷銆?/p>
         <p class="station-bug">
-          <span class="bug-name">巨叉锹甲</span>
+          <span class="bug-name">宸ㄥ弶閿圭敳</span>
           <span class="bug-latin">Lucanus planeti</span>
         </p>
-        <a class="btn-station" href="species.html?band=mist-forest">去看本站代表虫种</a>
+        <a class="btn-station" href="species.html?band=mist-forest">鍘荤湅鏈珯浠ｈ〃铏</a>
       </div>
     </section>
 
-    <!-- 第三站 · 红河蝴蝶谷 -->
+    <!-- 绗笁绔?路 绾㈡渤铦磋澏璋?-->
     <section class="station station-3" id="station-3" data-accent="#9b8ec4">
       <div class="layer-far" aria-hidden="true">
         <span class="blob blob-a"></span>
         <span class="blob blob-b"></span>
       </div>
       <div class="layer-front sil-butterfly" aria-hidden="true">
-        <svg viewBox="0 0 320 270" role="img" aria-label="金斑喙凤蝶剪影">
+        <svg viewBox="0 0 320 270" role="img" aria-label="閲戞枒鍠欏嚖铦跺壀褰?>
           <g fill="currentColor" stroke="none">
             <ellipse cx="160" cy="152" rx="9" ry="56"/>
             <circle cx="160" cy="88" r="12"/>
@@ -129,25 +129,25 @@
         </svg>
       </div>
       <div class="station-content">
-        <p class="station-index">第三站 · 蝶之谷</p>
-        <h2 class="station-name">红河蝴蝶谷</h2>
-        <p class="station-poem">溪谷拐弯的地方，风把整个季节的翅膀都吹了起来。</p>
+        <p class="station-index">绗笁绔?路 铦朵箣璋?/p>
+        <h2 class="station-name">绾㈡渤铦磋澏璋?/h2>
+        <p class="station-poem">婧胺鎷愬集鐨勫湴鏂癸紝椋庢妸鏁翠釜瀛ｈ妭鐨勭繀鑶€閮藉惞浜嗚捣鏉ャ€?/p>
         <p class="station-bug">
-          <span class="bug-name">金斑喙凤蝶</span>
+          <span class="bug-name">閲戞枒鍠欏嚖铦?/span>
           <span class="bug-latin">Teinopalpus aureus</span>
         </p>
-        <a class="btn-station" href="species.html?band=valley">去看本站代表虫种</a>
+        <a class="btn-station" href="species.html?band=valley">鍘荤湅鏈珯浠ｈ〃铏</a>
       </div>
     </section>
 
-    <!-- 第四站 · 高黎贡山 -->
+    <!-- 绗洓绔?路 楂橀粠璐″北 -->
     <section class="station station-4" id="station-4" data-accent="#7ab5b0">
       <div class="layer-far" aria-hidden="true">
         <span class="blob blob-a"></span>
         <span class="blob blob-b"></span>
       </div>
       <div class="layer-front sil-atlas" aria-hidden="true">
-        <svg viewBox="0 0 360 290" role="img" aria-label="乌桕大蚕蛾剪影">
+        <svg viewBox="0 0 360 290" role="img" aria-label="涔屾澶ц殨铔惧壀褰?>
           <g fill="currentColor" stroke="none">
             <ellipse cx="180" cy="162" rx="12" ry="62"/>
             <circle cx="180" cy="94" r="11"/>
@@ -161,25 +161,25 @@
         </svg>
       </div>
       <div class="station-content">
-        <p class="station-index">第四站 · 天行长臂之地</p>
-        <h2 class="station-name">高黎贡山</h2>
-        <p class="station-poem">夜色浓得像树影，世界最大的蛾正把月光摊开在叶背上。</p>
+        <p class="station-index">绗洓绔?路 澶╄闀胯噦涔嬪湴</p>
+        <h2 class="station-name">楂橀粠璐″北</h2>
+        <p class="station-poem">澶滆壊娴撳緱鍍忔爲褰憋紝涓栫晫鏈€澶х殑铔炬鎶婃湀鍏夋憡寮€鍦ㄥ彾鑳屼笂銆?/p>
         <p class="station-bug">
-          <span class="bug-name">乌桕大蚕蛾</span>
+          <span class="bug-name">涔屾澶ц殨铔?/span>
           <span class="bug-latin">Attacus atlas</span>
         </p>
-        <a class="btn-station" href="species.html?band=gaoligong">去看本站代表虫种</a>
+        <a class="btn-station" href="species.html?band=gaoligong">鍘荤湅鏈珯浠ｈ〃铏</a>
       </div>
     </section>
 
-    <!-- 第五站 · 滇西北高山 -->
+    <!-- 绗簲绔?路 婊囪タ鍖楅珮灞?-->
     <section class="station station-5" id="station-5" data-accent="#7ab5b0">
       <div class="layer-far" aria-hidden="true">
         <span class="blob blob-a"></span>
         <span class="blob blob-b"></span>
       </div>
       <div class="layer-front sil-pierid" aria-hidden="true">
-        <svg viewBox="0 0 320 220" role="img" aria-label="橙翅襟粉蝶剪影">
+        <svg viewBox="0 0 320 220" role="img" aria-label="姗欑繀瑗熺矇铦跺壀褰?>
           <g fill="currentColor" stroke="none">
             <ellipse cx="160" cy="128" rx="7" ry="48"/>
             <circle cx="160" cy="74" r="10"/>
@@ -193,71 +193,72 @@
         </svg>
       </div>
       <div class="station-content">
-        <p class="station-index">第五站 · 雪线之下</p>
-        <h2 class="station-name">滇西北高山</h2>
-        <p class="station-poem">风变薄了，花变矮了，一抹橙翼贴着碎石坡掠过雪线。</p>
+        <p class="station-index">绗簲绔?路 闆嚎涔嬩笅</p>
+        <h2 class="station-name">婊囪タ鍖楅珮灞?/h2>
+        <p class="station-poem">椋庡彉钖勪簡锛岃姳鍙樼煯浜嗭紝涓€鎶规缈艰创鐫€纰庣煶鍧℃帬杩囬洩绾裤€?/p>
         <p class="station-bug">
-          <span class="bug-name">橙翅襟粉蝶</span>
+          <span class="bug-name">姗欑繀瑗熺矇铦?/span>
           <span class="bug-latin">Anthocharis bambusarum</span>
         </p>
-        <a class="btn-station" href="species.html?band=gaoligong">去看本站代表虫种</a>
+        <a class="btn-station" href="species.html?band=gaoligong">鍘荤湅鏈珯浠ｈ〃铏</a>
       </div>
     </section>
 
-    <!-- 底部收束：宏大数据带 -->
+    <!-- 搴曢儴鏀舵潫锛氬畯澶ф暟鎹甫 -->
     <section class="gradient-finale" id="finale">
-      <h2 class="finale-title">一座山，读尽云南昆虫</h2>
+      <h2 class="finale-title">涓€搴у北锛岃灏戒簯鍗楁槅铏?/h2>
       <div class="finale-stats">
         <div class="stat">
           <span class="stat-num">1300</span>
-          <span class="stat-label">种蝴蝶</span>
+          <span class="stat-label">绉嶈澊铦?/span>
         </div>
         <div class="stat">
           <span class="stat-num">210</span>
-          <span class="stat-label">种蜻蜓</span>
+          <span class="stat-label">绉嶈溁铚?/span>
         </div>
         <div class="stat">
           <span class="stat-num">80</span>
-          <span class="stat-label">种精选图谱</span>
+          <span class="stat-label">绉嶇簿閫夊浘璋?/span>
         </div>
       </div>
       <div class="finale-actions">
-        <a href="species.html" class="btn-primary">开始探索物种库</a>
-        <a href="expedition.html" class="btn-secondary">云南哪里看虫</a>
+        <a href="species.html" class="btn-primary">寮€濮嬫帰绱㈢墿绉嶅簱</a>
+        <a href="expedition.html" class="btn-secondary">浜戝崡鍝噷鐪嬭櫕</a>
       </div>
     </section>
 
-    <!-- Quiz：测测你是什么虫侦探（入口卡片） -->
+    <!-- Quiz锛氭祴娴嬩綘鏄粈涔堣櫕渚︽帰锛堝叆鍙ｅ崱鐗囷級 -->
     <section class="quiz-section">
       <div class="quiz-card">
         <div class="quiz-entry" id="quiz-entry">
-          <h2>测测你是什么虫侦探？</h2>
-          <p class="quiz-lead">5 道轻松小题，做完给你一个标签</p>
-          <button type="button" class="quiz-start" id="quiz-start">开始测试</button>
+          <h2>娴嬫祴浣犳槸浠€涔堣櫕渚︽帰锛?/h2>
+          <p class="quiz-lead">5 閬撹交鏉惧皬棰橈紝鍋氬畬缁欎綘涓€涓爣绛?/p>
+          <button type="button" class="quiz-start" id="quiz-start">寮€濮嬫祴璇?/button>
         </div>
         <div id="quiz-body" hidden></div>
-        <button type="button" class="quiz-submit" id="quiz-submit" hidden>提交答案</button>
+        <button type="button" class="quiz-submit" id="quiz-submit" hidden>鎻愪氦绛旀</button>
         <div class="quiz-result" id="quiz-result" hidden></div>
       </div>
     </section>
 
-    <!-- 全站统计 -->
-    <section class="stat-strip" aria-label="物种库统计">
-      <div class="strip-stat"><b>80</b><span>种记录</span></div>
-      <div class="strip-stat"><b>9</b><span>目</span></div>
-      <div class="strip-stat"><b>5</b><span>站</span></div>
-      <div class="strip-stat"><b>12</b><span>月</span></div>
+    <!-- 鍏ㄧ珯缁熻 -->
+    <section class="stat-strip" aria-label="鐗╃搴撶粺璁?>
+      <div class="strip-stat"><b>80</b><span>绉嶈褰?/span></div>
+      <div class="strip-stat"><b>9</b><span>鐩?/span></div>
+      <div class="strip-stat"><b>5</b><span>绔?/span></div>
+      <div class="strip-stat"><b>12</b><span>鏈?/span></div>
     </section>
   </main>
 
-  <script src="js/gradient.js"></script>
-  <script src="js/quiz.js?v=2"></script>
+  <script src="gradient.js"></script>
+  <script src="quiz.js?v=2"></script>
 
   <!-- Footer -->
   <footer class="footer">
-    <p class="principles">不捕捉 · 不售卖 · 不商业放飞</p>
-    <p>云虫秘境项目组 · 云南大学学术指导</p>
+    <p class="principles">涓嶆崟鎹?路 涓嶅敭鍗?路 涓嶅晢涓氭斁椋?/p>
+    <p>浜戣櫕绉樺椤圭洰缁?路 浜戝崡澶у瀛︽湳鎸囧</p>
   </footer>
 
 </body>
 </html>
+
